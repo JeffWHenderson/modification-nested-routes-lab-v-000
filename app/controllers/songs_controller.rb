@@ -26,8 +26,8 @@ class SongsController < ApplicationController
 
   def new
     @song = Song.new
-    raise params.inspect
     if Artist.find_by(params[:artist_id])
+          raise params.inspect
       @song.artist_id = params[:artist_id]
     end
     #@artist = Artist.find(params[:artist_id])
