@@ -1,6 +1,6 @@
 <%= form_for @song  do |f| %>
   <%= artist_select(@artist, @song) %> <br>
-  <%= select_tag @song.artist.name, options_from_collection_for_select(Artist.all, :id, :name) %> <br>
+  <%= select_tag @song.artist.name, options_from_collection_for_select(Artist.all, :id, :id) %> <br>
   <%= select_tag "song[artist_id]", options_from_collection_for_select(Artist.all, :id, :name) %> <br>
 
   <%= f.label :title %>
